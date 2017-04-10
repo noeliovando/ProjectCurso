@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/contact.css" rel="stylesheet">
+
+    <script>
+        function validateForm() {
+            var nombre = document.forms["contact"]["id_nombre"].value;
+            var correo = document.forms["contact"]["id_correo"].value;
+            var ciudad = document.forms["contact"]["id_ciudad"].value;
+            var pais = document.forms["contact"]["id_pais"].value;
+            var cargo = document.forms["contact"]["id_cargo"].value;
+            var telefono = document.forms["contact"]["id_telefono"].value;
+            if (nombre == "") {
+                alert("Nombre debe estar lleno");
+                return false;
+            }
+            if (correo == "") {
+                alert("Correo debe estar lleno");
+                return false;
+            }
+            if (ciudad == "") {
+                alert("Ciudad debe estar lleno");
+                return false;
+            }
+            if (pais == "") {
+                alert("País debe estar lleno");
+                return false;
+            }
+            if (cargo == "") {
+                alert("Cargo debe estar lleno");
+                return false;
+            }
+            if (telefono == "") {
+                alert("Telefono debe estar lleno");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<nav id="nav-1">
+    <a class="link-1" href="../index.html">Inicio</a>
+    <a class="link-1" href="../webs/servicios.html">Servicios</a>
+    <a class="link-1" href="../webs/contacto.html">Contacto</a>
+</nav>
+
+<div class="container">
+    <form id="contact" action="" onsubmit="return validateForm()" method="post">
+        <h3>Contacto</h3>
+        <h4>Contactanos ahora!</h4>
+        <fieldset>
+            <input placeholder="Tu nombre" type="text" tabindex="1" autofocus id="id_nombre">
+        </fieldset>
+        <fieldset>
+            <input placeholder="Tu correo" type="email" tabindex="2" id="id_correo">
+        </fieldset>
+        <fieldset>
+            <input placeholder="Tu Ciudad" type="text" tabindex="1" autofocus id="id_ciudad">
+        </fieldset>
+        <fieldset>
+            <input placeholder="Tu País" type="text" tabindex="1" autofocus id="id_pais">
+        </fieldset>
+        <fieldset>
+            <input placeholder="Tu cargo" type="text" tabindex="1" autofocus id="id_cargo">
+        </fieldset>
+        <fieldset>
+            <input placeholder="Tu numero telefonico" type="tel" tabindex="3" id="id_telefono">
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Escribe tu mensaje aquí...." tabindex="5" ></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="submit" type="submit" id="enviar" data-submit="...Enviando">Enviar</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
